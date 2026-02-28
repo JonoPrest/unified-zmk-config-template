@@ -52,17 +52,17 @@
                 // Layer 2: Arrows
                 arrows_layer {
 // ┌──────┬──────┬──────┬──────┬──────┬──────┐   ┌──────┬──────┬──────┬──────┬──────┬──────┐
-// │      │      │      │      │      │      │   │ HOME │ PGDN │ PGUP │ END  │      │      │
-// │      │      │      │      │      │      │   │ LEFT │ DOWN │  UP  │ RGHT │      │      │
+// │      │      │      │      │      │      │   │      │ HOME │ PGDN │ PGUP │ END  │      │
+// │      │      │      │      │      │      │   │      │ LEFT │ DOWN │  UP  │ RGHT │      │
 // │      │      │      │      │      │      │   │      │      │      │      │      │      │
 // └──────┴──────┴──────┼──────┼──────┼──────┤   ├──────┼──────┼──────┼──────┴──────┴──────┘
 //                      │      │      │      │   │      │      │      │
 //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans     &trans
-   &trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-   &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                           &trans  &trans  &trans     &trans     &trans     &trans
+   &trans  &trans  &trans  &trans  &trans  &trans     &trans &kp HOME &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans     &trans &kp LEFT &kp DOWN   &kp UP     &kp RIGHT  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans     &trans &trans   &trans     &trans     &trans     &trans
+                           &trans  &trans  &trans     &trans &trans   &trans
                         >;
                 };
 
