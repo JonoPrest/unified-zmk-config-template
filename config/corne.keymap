@@ -121,7 +121,7 @@
    &kp TAB             &kp Q      &kp W           &kp F           &kp P           &kp B         &kp J      &kp L           &kp U           &kp Y           &kp SEMI   &kp BSPC
    &shesc LSHFT ESC    &kp A      &hml_r LCTRL R  &hml_s LALT S   &hml_t LGUI T   &kp G         &kp M      &hmr_n RGUI N   &hmr_e RALT E   &hmr_i RCTRL I  &kp O      &kp SQT
    &kp LSHFT           &kp Z      &kp X           &kp C           &kp D           &kp V         &kp K      &kp H           &kp COMMA       &kp DOT         &kp FSLH   &kp RSHFT
-                                                  &lt 1 NONE      &esc_shift LSHFT ESC  &lt 3 RET     &kp BSPC   &lt 2 SPACE     &kp TAB
+                                                  &mo 1           &esc_shift LSHFT ESC  &lt 3 RET     &kp BSPC   &lt 2 SPACE     &kp TAB
                         >;
                 };
 
