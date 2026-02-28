@@ -13,12 +13,22 @@
 
 / {
         behaviors {
-                // Shift/Esc mod-tap: tap for Esc, hold for Shift
+                // Shift/Esc mod-tap: tap for Esc, hold for Shift (home row)
                 shesc: shift_escape {
                         compatible = "zmk,behavior-mod-tap";
                         #binding-cells = <2>;
                         flavor = "hold-preferred";
                         tapping-term-ms = <200>;
+                        bindings = <&kp>, <&kp>;
+                };
+
+                // Thumb: Esc/Shift
+                esc_shift: escape_shift {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <175>;
                         bindings = <&kp>, <&kp>;
                 };
 
@@ -106,12 +116,12 @@
 // | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  | SEMI | BSPC |
 // | ESC  |  A  | R/⌃ | S/⌥ | T/⌘ |  G  |   |  M  | N/⌘  | E/⌥ | I/⌃ |  O   |  '   |
 // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /   | SHFT |
-//                    | L2  | SPC | L1  |   | RET | L3   | DEL |
+//                    | L1  |ESC/⇧|RET/L3|   | BSPC|SPC/L2| TAB |
                         bindings = <
    &kp TAB             &kp Q      &kp W           &kp F           &kp P           &kp B         &kp J      &kp L           &kp U           &kp Y           &kp SEMI   &kp BSPC
    &shesc LSHFT ESC    &kp A      &hml_r LCTRL R  &hml_s LALT S   &hml_t LGUI T   &kp G         &kp M      &hmr_n RGUI N   &hmr_e RALT E   &hmr_i RCTRL I  &kp O      &kp SQT
    &kp LSHFT           &kp Z      &kp X           &kp C           &kp D           &kp V         &kp K      &kp H           &kp COMMA       &kp DOT         &kp FSLH   &kp RSHFT
-                                                  &mo 2           &kp SPACE       &mo 1         &kp RET    &mo 3           &kp DEL
+                                                  &lt 1 NONE      &esc_shift LSHFT ESC  &lt 3 RET     &kp BSPC   &lt 2 SPACE     &kp TAB
                         >;
                 };
 
