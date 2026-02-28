@@ -51,9 +51,9 @@
 //                      │  L1  │ESC/⇧ │RET/L3│   │ BSPC │SPC/L2│ TAB  │
 //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
                         bindings = <
-   &kp TAB        &kp Q  &kp W        &kp F       &kp P          &kp G        &kp J     &kp L        &kp U       &kp Y          &kp SEMI     &kp BSPC
-   &mt LSHFT ESC  &kp A  &hml LCTRL R &hml LALT S &hml LGUI T    &kp D        &kp H     &hmr RGUI N  &hmr RALT E &hmr RCTRL I   &kp O        &kp SQT
-   &kp LSHFT      &kp Z  &kp X        &kp C       &kp V          &kp B        &kp K     &kp M        &kp COMMA   &kp DOT        &kp FSLH     &kp RSHFT
+   &kp TAB    &kp Q  &kp W        &kp F       &kp P          &kp G        &kp J     &kp L        &kp U       &kp Y          &kp SEMI     &kp BSPC
+   &kp BSPC   &kp A  &hml LCTRL R &hml LALT S &hml LGUI T    &kp D        &kp H     &hmr RGUI N  &hmr RALT E &hmr RCTRL I   &kp O        &kp SQT
+   &kp LSHFT  &kp Z  &kp X        &kp C       &kp V          &kp B        &kp K     &kp M        &kp COMMA   &kp DOT        &kp FSLH     &kp RSHFT
                                       &mo 1       &mt LSHFT ESC  &lt 3 RET    &kp BSPC  &lt 2 SPACE  &kp TAB
                         >;
                 };
