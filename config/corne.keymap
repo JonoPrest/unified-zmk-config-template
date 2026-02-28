@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
+        keymap ssss
                 compatible = "zmk,keymap";
 
                 // Layer 0: Colemak
@@ -49,7 +49,7 @@
                         >;
                 };
 
-                // Layer 2: Arrows
+                // Layer 2: Agrows
                 arrows_layer {
 // ┌──────┬──────┬──────┬──────┬──────┬──────┐   ┌──────┬──────┬──────┬──────┬──────┬──────┐
 // │      │      │      │      │      │      │   │ HOME │ PGDN │ PGUP │ END  │      │      │
@@ -76,10 +76,10 @@
 //                      │      │      │      │   │      │      │      │
 //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
                         bindings = <
-   &kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT     &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &kp BSLH
-   &trans     &trans     &trans     &trans     &trans     &trans        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp SQT    &kp GRAVE
-   &trans     &trans     &trans     &trans     &trans     &trans        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE   &kp TILDE
-                                    &trans     &trans     &trans        &trans     &trans     &trans
+   &trans  &kp GRAVE  &kp AT    &kp HASH  &kp DLLR   &kp TILDE  &kp CARET &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS   &trans
+   &trans  &kp EXCL   &kp FSLH  &kp LT    &kp GT     &kp PRCNT  &kp AMPS  &kp LPAR  &kp RPAR  &kp MINUS  &kp EQUAL  &trans
+   &trans  &trans     &trans    &BSLH     &PIPE      &trans     &kp STAR  &kp LBKT  &kp RBKT  &trans     &trans     &trans
+                                &trans    &trans     &trans     &kp SQT   &kp DQT   &trans
                         >;
                 };
 
