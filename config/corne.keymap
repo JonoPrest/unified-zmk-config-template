@@ -36,6 +36,16 @@
                         hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
                         hold-trigger-on-release;
                 };
+
+                lth: layer_tap_hold {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        require-prior-idle-ms = <150>;
+                        tapping-term-ms = <280>;
+                        quick-tap-ms = <175>;
+                        bindings = <&mo>, <&kp>;
+                };
         };
 
         keymap {
@@ -51,10 +61,10 @@
 //                      │  L1  │ESC/⇧ │RET/L3│   │ BSPC │SPC/L2│ TAB  │
 //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
                         bindings = <
-   &kp TAB    &kp Q  &kp W        &kp F       &kp P          &kp G        &kp J     &kp L        &kp U       &kp Y          &kp SEMI     &kp BSPC
-   &kp BSPC   &kp A  &hml LCTRL R &hml LALT S &hml LGUI T    &kp D        &kp H     &hmr RGUI N  &hmr RALT E &hmr RCTRL I   &kp O        &kp SQT
-   &kp GRAVE  &kp Z  &kp X        &kp C       &kp V          &kp B        &kp K     &kp M        &kp COMMA   &kp DOT        &kp FSLH     &kp RSHFT
-                                  &mo 1       &mt LSHFT ESC  &lt 3 RET    &kp BSPC  &lt 2 SPACE  &mt RSHFT TAB
+   &kp TAB    &kp Q  &kp W        &kp F       &kp P          &kp G        &kp J     &kp L         &kp U       &kp Y          &kp SEMI     &kp BSPC
+   &kp BSPC   &kp A  &hml LCTRL R &hml LALT S &hml LGUI T    &kp D        &kp H     &hmr RGUI N   &hmr RALT E &hmr RCTRL I   &kp O        &kp SQT
+   &kp GRAVE  &kp Z  &kp X        &kp C       &kp V          &kp B        &kp K     &kp M         &kp COMMA   &kp DOT        &kp FSLH     &kp RSHFT
+                                  &mo 1       &mt LSHFT ESC  &lth 3 RET   &kp BSPC  &lth 2 SPACE  &mt RSHFT TAB
                         >;
                 };
 
