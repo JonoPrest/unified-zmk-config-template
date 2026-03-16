@@ -21,6 +21,9 @@ fi
 echo "Found build run: $RUN_ID"
 echo "Downloading artifacts..."
 
+# Remove old firmware before downloading
+rm -rf firmware/
+
 # Download artifacts
 gh run download "$RUN_ID" --dir .
 
